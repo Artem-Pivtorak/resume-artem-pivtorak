@@ -272,10 +272,10 @@ btn.addEventListener("click", (e) => {
         ${orig.innerHTML}
       </div>
       <div class="overlay-back">
-        <button class="back-btn" data-file="http://localhost:8000/files/Artem_Pivtorak_Fullstack developer.jpg">Download jpg</button>
-        <button class="back-btn" data-file="http://localhost:8000/files/Artem_Pivtorak_Fullstack developer.png">Download png</button>
-        <button class="back-btn" data-file="http://localhost:8000/files/Artem_Pivtorak_Fullstack developer.rar">Download rar</button>
-        <button class="back-btn" data-file="http://localhost:8000/files/Artem_Pivtorak_Fullstack developer.pdf">Download pdf</button>
+        <button class="back-btn" data-file="https://servers-resume-artem.netlify.app/files/Artem_Pivtorak_Fullstack developer.jpg">Download jpg</button>
+        <button class="back-btn" data-file="https://servers-resume-artem.netlify.app/files/Artem_Pivtorak_Fullstack developer.png">Download png</button>
+        <button class="back-btn" data-file="https://servers-resume-artem.netlify.app/files/Artem_Pivtorak_Fullstack developer.rar">Download rar</button>
+        <button class="back-btn" data-file="https://servers-resume-artem.netlify.app/files/Artem_Pivtorak_Fullstack developer.pdf">Download pdf</button>
       </div>
     </div>
   `;
@@ -364,7 +364,7 @@ function openOverlay(type) {
   const overlay = document.getElementById("overlay");
   const content = document.getElementById("overlay-content");
 
-  fetch('http://localhost:8000/projects')
+  fetch('https://servers-resume-artem.netlify.app/projects')
     .then(res => res.json())
     .then(data => {
       const projects = data[type] || [];
@@ -376,7 +376,7 @@ function openOverlay(type) {
           let imagesHtml = '';
           if (project.images) {
             project.images.forEach((img, i) => {
-              imagesHtml += `<img src="http://localhost:8000/${img}" alt="${i + 1}">\n`;
+              imagesHtml += `<img src="https://servers-resume-artem.netlify.app/${img}" alt="${i + 1}">\n`;
             });
           }
 
@@ -577,8 +577,8 @@ btn2.addEventListener("click", (e) => {
         ${orig.innerHTML}
       </div>
       <div class="overlay-back">
-        <button class="back-btn" data-file="http://localhost:8000/files/Another_Resume.jpg">Download jpg</button>
-        <button class="back-btn" data-file="http://localhost:8000/files/Another_Resume.pdf">Download pdf</button>
+        <button class="back-btn" data-file="https://servers-resume-artem.netlify.app/files/Another_Resume.jpg">Download jpg</button>
+        <button class="back-btn" data-file="https://servers-resume-artem.netlify.app/files/Another_Resume.pdf">Download pdf</button>
       </div>
     </div>
   `;
