@@ -4306,6 +4306,7 @@ margin-left: 5px;
     margin: 20px 0 10px !important;
     width: 100% !important;
     text-align: center !important;
+    transform: translateX(160px) !important;
   }
 
   .portfolio-text {
@@ -4314,6 +4315,7 @@ margin-left: 5px;
     font-size: 24px !important;
     width: 100% !important;
     text-align: center !important;
+    transform: translateX(160px) !important;
   }
 
   .datas {
@@ -4365,7 +4367,7 @@ margin-left: 5px;
 
   .details-text-main {
     font-size: 32px !important;
-    margin: 0 0 20px !important;
+    margin: -80px 0 20px !important;
     padding-left: 0 !important;
     width: 100% !important;
     text-align: center !important;
@@ -4373,16 +4375,18 @@ margin-left: 5px;
 
   .details-text {
     font-size: 18px !important;
-    margin: 0 0 40px !important;
+    margin: 150px 0 40px !important;
     padding-left: 0 !important;
     width: 100% !important;
     text-align: center !important;
+    transform: translateX(-280px) !important;
   }
 
   .button-contact-details {
     justify-content: center !important;
     width: 100% !important;
     gap: 30px !important;
+    transform: translateX(-140px) !important;
   }
 
   /* Skills Icons Grid */
@@ -4396,13 +4400,14 @@ margin-left: 5px;
   }
   
   .skills-icons-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
   
   .skill-icon {
     width: 80px;
     height: 80px;
+    object-fit: contain !important;
   }
 
   /* Skills Section Reset (#information) */
@@ -4416,52 +4421,78 @@ margin-left: 5px;
 
   .resume-photo-artem {
     position: static !important;
-    margin: 0 auto 30px !important;
+    margin: 0px auto 30px !important;
     height: 300px !important;
     width: auto !important;
     padding-left: 0 !important;
+    transform: translateX(-25px) !important;
+    object-fit: contain !important;
   }
 
   .skils-title {
     position: static !important;
-    margin: 0 20px 20px !important;
+    margin: 0 20px 20px -40px !important;
     font-size: 24px !important;
     text-align: center !important;
-    width: auto !important;
+    width: 85% !important;
+    max-width: 300px !important;
   }
 
   .skils-text {
     position: static !important;
-    margin: 0 20px 40px !important;
+    margin: 0 20px 40px -40px !important;
     font-size: 18px !important;
     text-align: center !important;
-    width: auto !important;
+    width: 85% !important;
+    max-width: 300px !important;
   }
 
   .icon-container-skils {
     position: static !important;
     width: 100% !important;
     padding: 0 !important;
+    margin-left: -40px !important;
   }
 
   .icons-list-skils {
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 30px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, auto) !important;
+    justify-items: center !important;
+    gap: 90px !important;
     margin-right: 0 !important;
+    padding: 0 20px !important;
   }
 
   .icon-clas-skils {
     opacity: 1 !important;
-    transform: translateX(-20px) translateY(0) scale(1) !important;
+    transform: translateX(20px) translateY(0) scale(1) !important;
     pointer-events: auto !important;
-    margin-left: -30px !important;
+    margin-left: -50px !important;
   }
 
   .icon-clas-skils.active .icon-paragraph {
-    width: 280px !important;
-    max-width: 280px !important;
+    width: 220px !important;
+    max-width: 220px !important;
     left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin-left: 0 !important;
+    padding: 12px 15px !important;
+    font-size: 12px !important;
+    text-align: center !important;
+  }
+
+  /* Праві іконки - зсуваємо фрейми лівіше */
+  .icon-clas-skils[data-title="creative"].active .icon-paragraph,
+  .icon-clas-skils[data-title="rating"].active .icon-paragraph {
+    left: -80% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* Ліві іконки - зсуваємо фрейми правіше */
+  .icon-clas-skils[data-title="coding"].active .icon-paragraph,
+  .icon-clas-skils[data-title="media"].active .icon-paragraph {
+    left: 60% !important;
     transform: translateX(-50%) !important;
   }
 
@@ -4473,9 +4504,11 @@ margin-left: 5px;
   }
 
   .resume-photo-artem-pivtorak {
-    height: auto !important;
-    width: 320px !important;
+    height: 280px !important;
+    width: auto !important;
     margin: 0 auto !important;
+    transform: translateX(1px) !important;
+    object-fit: contain !important;
   }
 
   .certificate {
@@ -4614,6 +4647,7 @@ margin-left: 5px;
   /* Резюме - збільшення відступу */
   .resume-text {
     margin-bottom: 30px !important;
+    margin-top: -30px !important;
   }
   .resume-paragraf {
     margin-top: 10px !important;
